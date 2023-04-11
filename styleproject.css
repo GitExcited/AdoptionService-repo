@@ -1,0 +1,166 @@
+:root {
+  --headercol: #bc6c25;
+  --sidemenucol: #dda15e;
+  --maincontentcol: #e9edc9;
+  --footercol: #283618;
+}
+body {
+  margin: 0;
+  background-color: var(--maincontentcol);
+  font-family: "M PLUS Rounded 1c", sans-serif;
+}
+#main {
+  display: flex;
+}
+
+#sidemenu {
+  flex: 0.25;
+  border-style: solid;
+  border-color: #283618;
+  background-color: var(--sidemenucol);
+}
+#maincontent {
+  flex: 0.75;
+  border-style: solid;
+  border-color: #283618;
+  background-color: var(--maincontentcol);
+}
+#headertable {
+  display: flex;
+  background-color: var(--headercol);
+  align-items: center;
+  justify-content: center;
+}
+footer {
+  background-color: var(--footercol);
+  font-size: smaller;
+}
+
+/** side menu styling **/
+a { 
+  color: inherit; 
+  text-decoration: none;
+  display: block;
+  width: 100%;
+  height: 100%;
+} 
+ul{
+  padding-left:0;
+}
+li {
+  font-size: x-large;
+  padding-left:20px;
+  margin: 0px;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  cursor: pointer;
+}
+li:hover {
+  background-color: #fefae0;
+}
+
+/** Home Styling**/
+
+#maincontent {
+  background-image: url("./images/doghuman.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: right;
+
+  font-family: "M PLUS Rounded 1c", sans-serif;
+}
+.content {
+  margin: 0;
+  width: 60%;
+  height: 100%;
+  background: linear-gradient(
+    to right,
+    #dda15e 20%,
+    #d2dee7 90%,
+    rgba(236, 235, 173, 0) 100%
+  );
+}
+
+.content h1,
+h3 {
+  margin: 0px;
+  padding-top: 15px;
+  margin-left: 20px;
+}
+
+.textmessage {
+  margin-left: 20px;
+  width: 80%;
+  font-weight: 600;
+}
+.textmessage p:last-child {
+  font-weight: 100;
+}
+
+/**Find cat/dog styling**/
+
+.greenform {
+  margin-left: 20px;
+  background-color: #606c38;
+  width: 50%;
+  border-style: solid;
+  border-color: var(--footercol);
+  border-radius: 20px;
+  display: grid;
+  justify-content: center;
+  grid-gap: 15px;
+  text-align: center;
+  margin-bottom: 50px;
+}
+.find {
+  background-image: url("./images/find.jpg") !important;
+}
+
+/**Dog care styling**/
+
+#dogcarecontent {
+  padding-left: 20px;
+  width: 60%;
+}
+
+.maindogcare {
+  background-image: url("./images/dogcare.jpg") !important;
+}
+
+/**Cat care styling**/
+
+#catcarecontent {
+  padding-left: 20px;
+  width: 60%;
+}
+
+.maincatcare {
+  background-image: url("./images/catcare.jpg") !important;
+}
+
+/**Give away styling**/
+
+/**contact styling**/
+.maincontact {
+  background-image: url("./images/contact.png") !important;
+}
+
+
+/** Browse page animal style**/
+
+.animal{
+  display:flex;
+  width:800px;
+  padding-left:50px;
+  padding-top:50px;
+}
+.animal  img{
+  border-radius:30%;
+  width:300px;
+}
+
+/** Create Account Styling**/
+
+.maincreate{
+  background-image: url("./images/dogComputer.jpg") !important;
+}
