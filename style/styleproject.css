@@ -4,7 +4,6 @@
   --maincontentcol: #e9edc9;
   --footercol: #283618;
 }
-
 body {
   margin: 0;
   background-color: var(--maincontentcol);

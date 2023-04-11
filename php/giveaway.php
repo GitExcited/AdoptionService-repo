@@ -40,7 +40,8 @@
         }
 
         $formGiveAway = <<<EOD
-        <form action="" method="post" class ="greenform" id="logoutForm">
+        <form action="giveaway.php" method="post" class ="greenform" id="logoutForm">
+        <input type="hidden" name="form_name" value="logoutForm">
         <input type="Submit"  value="Logout" name="logout" class = "logout" onclick ="logoutFunction()">
         </form>
 <form  method="POST" action=giveaway.php onsubmit=" verifyGiveaway()" >
@@ -181,7 +182,7 @@ EOD;
         }
         echo $form;
 
-        if (isset($_POST['logout'])) {
+        if ($_POST['form_name']=='logoutForm') {
           unset($_SESSION['loggedin']);
           header('Location: ' . $_SERVER['PHP_SELF']);
           exit;
