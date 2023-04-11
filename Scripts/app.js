@@ -90,5 +90,6 @@ function validateEmail(email) {
 
 function logoutFunction (){
     alert("YOU ARE NOW LOGED OUT! ");
+    document.getElementById("logoutForm").submit();
 }
 
