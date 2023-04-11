@@ -21,10 +21,10 @@ function validateUser($username, $password)
 
 function usernameExists($username)
 {
-    if (!file_exists('loginFile.txt')) {//Checks if this is the first username
+    if (!file_exists('../TextFiles/loginFile.txt')) {//Checks if this is the first username
         return false;
     }
-    $login_file = fopen("loginFile.txt", "r");
+    $login_file = fopen("../TextFiles/loginFile.txt", "r");
     while (($line = fgets($login_file)) !== false) {
         $user_info = explode(":", $line);
         if ($user_info[0] == $username) {
@@ -37,10 +37,10 @@ function usernameExists($username)
 }
 
 function verifyUsernameAndPass($username,$password){
-    if (!file_exists('loginFile.txt')) {//Checks if there are any users created yet
+    if (!file_exists('../TextFiles/loginFile.txt')) {//Checks if there are any users created yet
         return false;
     }
-    $login_file = fopen("loginFile.txt", "r");
+    $login_file = fopen("../TextFiles/loginFile.txt", "r");
     while (($line = fgets($login_file)) !== false) {
         $user_info = explode(":", trim($line));
         if ($user_info[0] == $username && $user_info[1]==$password) {

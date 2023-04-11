@@ -62,7 +62,7 @@ li:hover {
 /** Home Styling**/
 
 #maincontent {
-  background-image: url("./images/doghuman.jpg");
+  background-image: url("../images/doghuman.jpg");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: right;
@@ -113,7 +113,7 @@ h3 {
   margin-bottom: 50px;
 }
 .find {
-  background-image: url("./images/find.jpg") !important;
+  background-image: url("../images/find.jpg") !important;
 }
 
 /**Dog care styling**/
@@ -124,7 +124,7 @@ h3 {
 }
 
 .maindogcare {
-  background-image: url("./images/dogcare.jpg") !important;
+  background-image: url("../images/dogcare.jpg") !important;
 }
 
 /**Cat care styling**/
@@ -135,14 +135,14 @@ h3 {
 }
 
 .maincatcare {
-  background-image: url("./images/catcare.jpg") !important;
+  background-image: url("../images/catcare.jpg") !important;
 }
 
 /**Give away styling**/
 
 /**contact styling**/
 .maincontact {
-  background-image: url("./images/contact.png") !important;
+  background-image: url("../images/contact.png") !important;
 }
 
 
@@ -162,5 +162,5 @@ h3 {
 /** Create Account Styling**/
 
 .maincreate{
-  background-image: url("./images/dogComputer.jpg") !important;
+  background-image: url("../images/dogComputer.jpg") !important;
 }

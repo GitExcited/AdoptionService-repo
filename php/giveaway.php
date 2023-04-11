@@ -1,29 +1,17 @@
-<?php include("./Scripts/validateUser.php") ?>
+<?php include("../Scripts/validateUser.php") ?>
 
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Adopt a cat/dog</title>
-  <link rel="stylesheet" href="styleproject.css">
+<?php include("./Utility/headHTML.php"); ?>
 
-  <!-- Google fonts-->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@100;300;400;700;900&display=swap" rel="stylesheet">
-  <!-- JS scripts-->
-  <script src="app.js" async></script>
-</head>
 
 <body>
   <!--Header-->
-  <?php include("header.php"); ?>
+  <?php include("./Utility/header.php"); ?>
 
   <div id="main">
-    <?php include("sidemenu.php"); ?>
+    <?php include("./Utility/sidemenu.php"); ?>
 
     <div id="maincontent" class="find">
       <div class="content" id="findcontent">
@@ -200,10 +188,10 @@ EOD;
         ?>
 
         <?php
-        if ($_SERVER["REQUEST_METHOD"] == "POST" && $_POST['form_name']=='giveAwayForm') {//Runs if this is the giveaway form
+        if ($_SERVER["REQUEST_METHOD"] == "POST" && $_POST['form_name'] == 'giveAwayForm') { //Runs if this is the giveaway form
           $validatedForm = $_POST["validated"];
           if ($validatedForm == "true") { //Only runs if form was validated
-            $animal = $_POST["animal"]; 
+            $animal = $_POST["animal"];
             $animalName = $_POST["animalName"];
             $breed = $_POST["breed"];
             $mixedBreed = $_POST["mixedBreed"];
@@ -218,35 +206,33 @@ EOD;
             $email = $_POST["owneremail"];
 
             $counter = 0;
-            if (file_exists('AvailablePetInfo.txt')) {//Checks if there are any pets created yet
-              $AvailablePet = fopen("AvailablePetInfo.txt", "r");
+            if (file_exists('../TextFiles/AvailablePetInfo.txt')) { //Checks if there are any pets created yet
+              $AvailablePet = fopen("../TextFiles/AvailablePetInfo.txt", "r");
               while (($line = fgets($AvailablePet)) !== false) {
                 $counter++; //Counts number of lines
-                }
-                fclose($AvailablePet);
               }
-           
-            $AvailablePet = fopen("AvailablePetInfo.txt", "a");
+              fclose($AvailablePet);
+            }
+
+            $AvailablePet = fopen("../TextFiles/AvailablePetInfo.txt", "a");
             if ($AvailablePet === false) {
-              echo "Failed to open file";} 
-            fwrite($AvailablePet,  $counter.":".$firstName . ":" . $lastName . ":" .$animalName. ":" .$animal .":" .
-            $breed. ":" .$mixedBreed. ":" .$age. ":" .$gender. ":" .$dogFriendly. ":" .$catFriendly. ":" .$childrenFriendly. ":" .
-            $comments. ":" .$email.
-            "\n");
+              echo "Failed to open file";
+            }
+            fwrite($AvailablePet,  $counter . ":" . $firstName . ":" . $lastName . ":" . $animalName . ":" . $animal . ":" .
+              $breed . ":" . $mixedBreed . ":" . $age . ":" . $gender . ":" . $dogFriendly . ":" . $catFriendly . ":" . $childrenFriendly . ":" .
+              $comments . ":" . $email .
+              "\n");
             fclose($AvailablePet);
             header('Location: ' . $_SERVER['PHP_SELF']);
             exit;
           }
         } ?>
-        
-
-
 
       </div>
     </div>
   </div>
 
-  <?php include("footer.php"); ?>
+  <?php include("./Utility/footer.php"); ?>
 
 </body>
 

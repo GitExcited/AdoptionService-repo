@@ -1,28 +1,14 @@
 
-<?php include("./scripts/validateUser.php");?> <!--Brings methods like validateUser and userExists-->
+<?php include("../Scripts/validateUser.php");?> <!--Brings methods like validateUser and userExists-->
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Create Account</title>
-    <link rel="stylesheet" href="styleproject.css">
-
-    <!-- Google fonts-->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@100;300;400;700;900&display=swap" rel="stylesheet">
-    <!-- JS scripts-->
-    <script src="app.js" async></script>
-</head>
+<?php include("./Utility/headHTML.php");?>
 
 <body>
     <!--Header-->
-    <?php include("header.php"); ?>
+    <?php include("./Utility/header.php"); ?>
     <div id="main">
-        <?php include("sidemenu.php"); ?>
+        <?php include("./Utility/sidemenu.php"); ?>
         <div id="maincontent" class="maincreate">
             <div class="content" id="homecontent">
 
@@ -53,7 +39,7 @@
                         if (usernameExists($username)) {
                             $message = "Username already exists"; //If username already exists
                         } else {
-                            $login_file = fopen("loginFile.txt", "a");
+                            $login_file = fopen("../TextFiles/loginFile.txt", "a");
                             fwrite($login_file,  $username . ":" . $password . "\n");
                             fclose($login_file);
                             $message = "Account created successfully. You can now log in.";
@@ -69,7 +55,7 @@
         </div>
     </div>
 
-    <?php include("footer.php"); ?>
+    <?php include("./Utility/footer.php"); ?>
 </body>
 
 </html>
