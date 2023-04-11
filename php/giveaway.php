@@ -40,7 +40,9 @@
         }
 
         $formGiveAway = <<<EOD
-        
+        <form action="" method="post" class ="greenform">
+        <button type="submit" name="logout" class = "logout"" onclick ="logoutFunction()">Logout</button>
+        </form>
 <form  method="POST" action=giveaway.php onsubmit=" verifyGiveaway()" >
           <input type="hidden" name="validated" value="false">
           <input type="hidden" name="form_name" value="giveAwayForm">
@@ -155,7 +157,6 @@
             </div>
             </div>
           </form>
-          <form action="" method="post"><button type="submit" name="logout">Logout</button></form>
 EOD;
 
         $formLogin = <<<EOD

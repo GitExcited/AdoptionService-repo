@@ -88,3 +88,7 @@ function validateEmail(email) {
    return /\S+@\S+\.\S+/.test(email);
 }
 
+function logoutFunction (){
+    alert("YOU ARE NOW LOGED OUT! ");
+}
+

@@ -4,6 +4,7 @@
   --maincontentcol: #e9edc9;
   --footercol: #283618;
 }
+
 body {
   margin: 0;
   background-color: var(--maincontentcol);
@@ -163,4 +164,17 @@ h3 {
 
 .maincreate{
   background-image: url("../images/dogComputer.jpg") !important;
+}
+
+/**Logout Button **/
+
+.logout {
+  display: block;
+  width: 100%;
+  border: none;
+  background-color: #606c38;
+  padding: 14px 28px;
+  font-size: 16px;
+  cursor: pointer;
+  text-align: center;
 }
